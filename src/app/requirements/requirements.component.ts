@@ -10,7 +10,7 @@ import { RequirementsService } from '../shared/services/requirements.service';
 })
 export class RequirementsComponent implements OnInit, OnDestroy {
   readonly voiseSubLang = ['ru', 'ua', 'en'];
-  readonly subLang = ['it', 'jpn', 'pol', 'kor', 'esp', 'china', 'china_tr', 'grm', 'bz', 'fr'];
+  readonly subLang = [['it', 'jpn', 'pol', 'kor'], ['esp', 'china', 'china_tr', 'grm'], ['bz', 'fr']];
 
   destroy$: Subject<boolean> = new Subject<boolean>();
   totalRequirements: Requirements[];

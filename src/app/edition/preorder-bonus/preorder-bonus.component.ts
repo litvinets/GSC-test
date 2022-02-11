@@ -30,5 +30,4 @@ export class PreorderBonusComponent implements OnInit, OnDestroy {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
   }
-
 }

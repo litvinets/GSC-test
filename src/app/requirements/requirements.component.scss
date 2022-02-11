@@ -15,11 +15,12 @@
   background: url(/assets/bg-box-1.png) center center/cover no-repeat;
   border: 2px solid rgba(242, 232, 217, 0.5);
   max-width: 570px;
-  min-height: 204px;
+  min-height: 200px;
   margin: 0;
   ul{
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
   li{
     display: flex;
@@ -30,10 +31,33 @@
     max-width: 222px;
   }
   &-lang{
-    max-height: 395px;
     padding: 2rem;
+  }
+  &-gameplay{
+    li{
+      margin: 10px;
+    }
   }
 }
 .title{
-  margin: 0;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  &-sub{
+    margin: 0 0 10px 0 !important;
+    padding: 0;
+  }
+}
+@media(max-width: 400px) {
+  .header{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: -1px;
+  }
 }

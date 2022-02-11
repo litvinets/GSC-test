@@ -9,7 +9,7 @@
   }
 }
 .image{
-  max-width: 360px;
+  max-width: 300px;
   max-height: 528px;
   margin-bottom: 5rem;
 }
@@ -40,7 +40,7 @@ nav{
     }
   }
 }
-@media(max-width: 400px) {
+@media(max-width: 660px) {
   .tabs-divider{
     display: none;
   }

@@ -16,7 +16,7 @@
     </ul>
   </nav>
 
-  <div fxLayout="row wrap" fxLayoutAlign="space-evenly start" fxLayoutGap.lg="5rem" fxLayoutGap.lt-sm="0">
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly start" fxLayoutGap="5rem" fxLayoutGap.lt-sm="0">
     <div fxLayout="column" fxLayoutAlign="space-between center">
       <img class="image" [src]="currentEdition.imagePath" alt="{{currentEdition.title}}">
       <button class="btn-preorder"></button>
@@ -26,7 +26,7 @@
       <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayout.lt-sm="column"
         fxLayoutAlign.lt-sm="start start">
         <h1>{{currentEdition.title}}</h1>
-        <div fxLayout="row" fxLayoutAlign="center end">
+        <div fxLayout="row" fxLayoutAlign="end end">
           <h2 class="content-price">&#8372;</h2>
           <h1 class="content-price"> {{currentEdition.price}}</h1>
           <h3 class="content-price">.00</h3>
