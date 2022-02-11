@@ -1,10 +1,12 @@
 <div class="wrapper" *ngIf="totalRequirements.length">
   <h1 class="header">SYSTEM REQUIREMENTS</h1>
 
-  <div>
-    <app-requirements-table *ngFor="let requirements of totalRequirements" [requirements]="requirements">
-    </app-requirements-table>
+  <div fxLayout="row wrap" fxLayoutAlign="space-around space-evenly">
     <div>
+      <app-requirements-table *ngFor="let requirements of totalRequirements" [requirements]="requirements">
+      </app-requirements-table>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-around space-evenly">
       <h3 class="title">GAMEPLAY:</h3>
       <ul class="box" fxLayout="row wrap" fxLayoutAlign="space-around space-evenly">
         <li><img src="/assets/icons/palyer-icon.png" alt="player-icon">Singleplayer</li>
@@ -13,9 +15,6 @@
           free update)</li>
         <li>RATING:<img src="/assets/icons/18age.png" alt="18age"></li>
       </ul>
-    </div>
-
-    <div>
       <h3 class="title">localization::</h3>
       <div class="box box-lang">
         <ul fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="1rem">
