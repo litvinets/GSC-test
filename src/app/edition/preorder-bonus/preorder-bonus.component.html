@@ -1,0 +1,46 @@
+<ng-container *ngIf="preorderBonus">
+  <div fxLayout="row" fxLayoutAlign="center center" class="bonus">
+    <div class="bonus-title">
+      <h2>+preorder</h2>
+    </div>
+    <div class="bonus-image"></div>
+    <div class="bonus-title bonus-title-reverse" fxLayout="row-reverse" fxLayoutAlign="center center">
+      <h2>bonus</h2><img class="bonus-info" src="/assets/icons/info.png" alt="info">
+    </div>
+  </div>
+  <div class="list" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-sm="column"
+    fxLayoutAlign.lt-sm="center start">
+    <ul>
+      <li [ngClass]="{'unactive': !preorderBonus.preorderBonus}">Preorder Bonus<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.preorderBonus ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+      <li [ngClass]="{'unactive': !preorderBonus.specialExtraQuest}">Special Extra Quest<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.specialExtraQuest ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+      <li [ngClass]="{'unactive': !preorderBonus.officialSoundtrack}">Official Soundtrack</li>
+      <li [ngClass]="{'unactive': !preorderBonus.detailsPreorder}">{{preorderBonus.detailsPreorder ?
+        preorderBonus.detailsPreorder :'2 Costumes, 3 Weapon skins' }}<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.detailsPreorder ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+      <li [ngClass]="{'unactive': !preorderBonus.seasonPass}">SEASON PASS<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.seasonPass ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+    </ul>
+
+    <ul>
+      <li [ngClass]="{'unactive': !preorderBonus.steamExclusiveContent}">Steam Exclusive Content<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.steamExclusiveContent ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+      <li [ngClass]="{'unactive': !preorderBonus.digitalArtbook}">Digital Artbook<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.digitalArtbook ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+      <li [ngClass]="{'unactive': !preorderBonus.detailsBonus}">{{preorderBonus.detailsBonus ?
+        preorderBonus.detailsBonus :'1 Costume, 3 Weapon skins' }}<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.detailsBonus ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+      <li [ngClass]="{'unactive': !preorderBonus.twoStoryexpansions}">2 Story Expansions<img class="bonus-info"
+          src="/assets/icons/{{!preorderBonus.twoStoryexpansions ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+    </ul>
+  </div>
+</ng-container>

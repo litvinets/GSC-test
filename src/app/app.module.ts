@@ -4,26 +4,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './shared/material.module';
-import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
-import { EditionComponent } from './main/edition/edition.component';
-import { RequirementsComponent } from './main/requirements/requirements.component';
+import { EditionComponent } from './edition/edition.component';
+import { RequirementsComponent } from './requirements/requirements.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PreorderBonusComponent } from './edition/preorder-bonus/preorder-bonus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    MainComponent,
     EditionComponent,
     RequirementsComponent,
+    PreorderBonusComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FlexModule,
-    MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

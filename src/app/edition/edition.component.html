@@ -1,0 +1,52 @@
+<div class="wrapper" *ngIf="currentEdition">
+  <nav>
+    <ul fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px" fxLayout.lt-sm="column"
+      fxLayoutAlign.lt-sm="center center">
+      <img class="tabs-divider" src="/assets/icons/line-01.png" alt="line-01">
+      <li (click)="onNavigate(editionTitle.standart)"
+        [ngClass]="{'active': currentEditionTitle === editionTitle.standart}">
+        {{editionTitle.standart}}</li>
+      <img class="tabs-divider" src="/assets/icons/line-02.png" alt="line-02">
+      <li (click)="onNavigate(editionTitle.delux)" [ngClass]="{'active': currentEditionTitle=== editionTitle.delux}">
+        {{editionTitle.delux}}</li>
+      <img class="tabs-divider" src="/assets/icons/line-03.png" alt="line-03">
+      <li (click)="onNavigate(editionTitle.ultimate)"
+        [ngClass]="{'active': currentEditionTitle === editionTitle.ultimate}">{{editionTitle.ultimate}}</li>
+      <img class="tabs-divider" src="/assets/icons/line-04.png" alt="line-04">
+    </ul>
+  </nav>
+
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly start" fxLayoutGap.lg="5rem" fxLayoutGap.lt-sm="0">
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+      <img class="image" [src]="currentEdition.imagePath" alt="{{currentEdition.title}}">
+      <button class="btn-preorder"></button>
+    </div>
+
+    <div class="content" fxLayout="column" fxLayoutAlign="space-between space-between">
+      <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayout.lt-sm="column"
+        fxLayoutAlign.lt-sm="start start">
+        <h1>{{currentEdition.title}}</h1>
+        <div fxLayout="row" fxLayoutAlign="center end">
+          <h2 class="content-price">&#8372;</h2>
+          <h1 class="content-price"> {{currentEdition.price}}</h1>
+          <h3 class="content-price">.00</h3>
+        </div>
+
+      </div>
+      <p>S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed survival-horror FPS series, set in
+        an
+        alternative version of the Chernobyl Exclusion Zone. Reveal a new chapter in the history of the Zone and delve
+        into a
+        nonlinear branching story in an open post-apocalyptic world. Fight for survival with various foes and hazardous
+        radioactive environments, forging your own path through anomalies and opponents to the legendary Heart of
+        Chernobyl.</p>
+      <p>{{currentEdition.description}}</p>
+
+      <app-preorder-bonus [currentEditionTitle]="currentEditionTitle"></app-preorder-bonus>
+    </div>
+
+  </div>
+
+
+
+</div>

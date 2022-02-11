@@ -1,0 +1,73 @@
+@import "/src/app/shared/shared.scss";
+
+.bonus{
+  opacity: 0.9;
+  width: 100%;
+  margin: 2rem 0;
+
+  &-info:hover{
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &-title{
+    position: relative;
+    top: 1.5rem;
+    width: 325px;
+    text-align: center;
+
+    font-family: $title-text;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    color: $white-color;
+    background: url(/assets/bonus-bg.png) center center/cover no-repeat;
+
+    &-reverse{
+      transform: scaleX(-1);
+      h2, .bonus-info{
+        transform: scaleX(-1);
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  &-image{
+    position: absolute;
+    z-index: 1000;
+    height: 156px;
+    width: 350px;
+    background: url(/assets/bonus-items.png) center center/cover no-repeat;
+    background-size: 10rem;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li{
+    list-style-image: url(/assets/icons/radiation.png);
+    margin-top: 1rem;
+  }
+
+  .bonus-info{
+    width: 1rem;
+    text-align: center;
+    margin: 0 1rem;
+  }
+}
+.list{
+  margin: 1rem;
+}
+.unactive{
+  color: $dark-color;
+  list-style-image: url(/assets/icons/radiation-gray.png) !important;
+  cursor: unset;
+}
+
+@media(max-width: 400px) {
+  .bonus {
+    display: none !important;
+  }
+}

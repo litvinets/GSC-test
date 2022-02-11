@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { PreorderBonusComponent } from './preorder-bonus.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('PreorderBonusComponent', () => {
+  let component: PreorderBonusComponent;
+  let fixture: ComponentFixture<PreorderBonusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ PreorderBonusComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(PreorderBonusComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

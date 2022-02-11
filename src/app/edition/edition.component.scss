@@ -1,0 +1,56 @@
+@import "/src/app/shared/shared.scss";
+.wrapper{
+  max-width: 1920px;
+  min-height: 830px;
+  margin: 0 0 2rem 0;
+}
+
+.btn-preorder{
+  background: url(/assets/button-pre-order.png) center center/cover no-repeat;
+  min-width: 307px;
+  min-height: 72px;
+  &:hover{
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+.image{
+  max-width: 360px;
+  max-height: 528px;
+  margin-bottom: 5rem;
+}
+.content{
+  padding: 0 1rem;
+  max-width: 660px;
+  &-price{
+    color: $yellow-color;
+    font-family: $title-text;
+  }
+}
+nav{
+  ul {
+    list-style-type: none;
+  }
+  li{
+    color: $base-color;
+    font-family: $base-text;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    &:hover{
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+}
+@media(max-width: 400px) {
+  .tabs-divider{
+    display: none;
+  }
+}
+.active{
+  color: $yellow-color !important;
+}
