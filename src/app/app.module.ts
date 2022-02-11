@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +19,6 @@ import { RequirementsTableComponent } from './shared/components/requirements-tab
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FlexModule,
     BrowserAnimationsModule,
     HttpClientModule,
