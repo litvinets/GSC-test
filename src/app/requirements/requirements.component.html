@@ -1,1 +1,13 @@
-<div class="wrapper">requirements works!</div>
+<div class="wrapper" *ngIf="totalRequirements.length">
+  <h1 class="header">SYSTEM REQUIREMENTS</h1>
+
+  <div>
+    <app-requirements-table *ngFor="let requirements of totalRequirements" [requirements]="requirements">
+    </app-requirements-table>
+
+    <div>
+    </div>
+
+  </div>
+
+</div>

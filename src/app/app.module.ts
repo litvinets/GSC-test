@@ -8,6 +8,7 @@ import { EditionComponent } from './edition/edition.component';
 import { RequirementsComponent } from './requirements/requirements.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PreorderBonusComponent } from './edition/preorder-bonus/preorder-bonus.component';
+import { RequirementsTableComponent } from './shared/components/requirements-table/requirements-table.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PreorderBonusComponent } from './edition/preorder-bonus/preorder-bonus.
     EditionComponent,
     RequirementsComponent,
     PreorderBonusComponent,
+    RequirementsTableComponent,
   ],
   imports: [
     BrowserModule,

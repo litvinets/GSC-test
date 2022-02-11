@@ -1,0 +1,22 @@
+.box{
+  padding: 1rem;
+  max-width: 570px;
+
+  td:first-child{
+    width: 30%;
+    text-align: end;
+    vertical-align: text-top;
+  }
+  td:nth-child(2n){
+    width: 70%;
+    padding-left: 1rem;
+    color: $gray-color;
+    vertical-align: text-top;
+  }
+  td{
+    height: 3rem;
+  }
+}
+.title{
+  margin: 0;
+}

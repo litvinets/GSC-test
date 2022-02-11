@@ -1,0 +1,18 @@
+[
+  {
+    "title": "minimum",
+    "osVersion": "Windows 10",
+    "processor": "AMD Ryzen 5 1600X / Intel Core i5-7600K",
+    "memory": "8 GB",
+    "osVersion2": "AMD Radeon RX 580 8GB / NVIDIA GeForce GTX 1060 6GB",
+    "discSpace": "150 GB SSD"
+  },
+  {
+    "title": "recommended",
+    "osVersion": "Windows 10",
+    "processor": "AMD Ryzen 7 3700X / Intel Core i7-9700K",
+    "memory": "8 GB",
+    "osVersion2": "AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB / NVIDIA GeForce GTX 1080 Ti 11GB",
+    "discSpace": "150 GB SSD"
+  }
+]

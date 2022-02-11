@@ -1,4 +1,13 @@
+@import "/src/app/shared/shared.scss";
 .wrapper{
-  min-height: 830px;
-  margin: 0;
+  margin: 20px;
+}
+.header{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 80px;
+
+  text-align: center;
+  text-transform: uppercase;
 }
