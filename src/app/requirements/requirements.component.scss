@@ -27,13 +27,14 @@
     flex-direction: row;
     gap: 10px;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     max-width: 222px;
   }
   &-lang{
     padding: 2rem;
   }
   &-gameplay{
+    padding: 1rem;
     li{
       margin: 10px;
     }
