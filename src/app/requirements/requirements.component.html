@@ -4,10 +4,37 @@
   <div>
     <app-requirements-table *ngFor="let requirements of totalRequirements" [requirements]="requirements">
     </app-requirements-table>
-
     <div>
+      <h3 class="title">GAMEPLAY:</h3>
+      <ul class="box" fxLayout="row wrap" fxLayoutAlign="space-around space-evenly">
+        <li><img src="/assets/icons/palyer-icon.png" alt="player-icon">Singleplayer</li>
+        <li><img src="/assets/icons/controlleer-icon.png" alt="player-icon">Full Controller Support</li>
+        <li><img src="/assets/icons/users-icon.png" alt="users-icon">Multiplayer (coming soon after the release, as a
+          free update)</li>
+        <li>RATING:<img src="/assets/icons/18age.png" alt="18age"></li>
+      </ul>
     </div>
 
+    <div>
+      <h3 class="title">localization::</h3>
+      <div class="box box-lang">
+        <ul fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="1rem">
+          <h3 class="title">VOICE & SUBTITLES:</h3>
+          <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="2rem">
+            <li *ngFor="let lang of voiseSubLang">
+              <img src="/assets/languages/{{lang}}.png" alt="lang">
+            </li>
+          </div>
+          <h3 class="title">SUBTITLES only:</h3>
+          <div fxLayout="cloumn wrap" fxLayoutAlign="start center" fxLayoutGap="2rem">
+            <li *ngFor="let lang of subLang">
+              <img src="/assets/languages/{{lang}}.png" alt="lang">
+            </li>
+          </div>
+        </ul>
+      </div>
+
+    </div>
   </div>
 
 </div>

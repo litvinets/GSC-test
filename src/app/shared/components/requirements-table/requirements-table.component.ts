@@ -7,7 +7,6 @@ import { Requirements } from '../../models/requirements.model';
   styleUrls: ['./requirements-table.component.scss']
 })
 export class RequirementsTableComponent implements OnInit {
-
   @Input() requirements: Requirements;
 
   constructor() { }

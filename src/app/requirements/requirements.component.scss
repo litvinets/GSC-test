@@ -11,3 +11,29 @@
   text-align: center;
   text-transform: uppercase;
 }
+.box{
+  background: url(/assets/bg-box-1.png) center center/cover no-repeat;
+  border: 2px solid rgba(242, 232, 217, 0.5);
+  max-width: 570px;
+  min-height: 204px;
+  margin: 0;
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  li{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 222px;
+  }
+  &-lang{
+    max-height: 395px;
+    padding: 2rem;
+  }
+}
+.title{
+  margin: 0;
+}
