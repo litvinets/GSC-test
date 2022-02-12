@@ -19,8 +19,10 @@
   &-price{
     color: $yellow-color;
     font-family: $title-text;
+    font-size: 43px;
     &-addition{
-      font-size: 24px;
+      font-size: 23px;
+      line-height: 36px;
     }
   }
 }
