@@ -9,6 +9,10 @@
     opacity: 0.5;
     cursor: pointer;
   }
+  &-info-unactive:hover{
+    opacity: 1;
+    cursor: default;
+  }
 
   &-title{
     position: relative;
@@ -67,7 +71,6 @@ ul {
 .unactive{
   color: $dark-color;
   list-style-image: url(/assets/icons/radiation-gray.png) !important;
-  cursor: unset;
 }
 
 @media(max-width: 660px) {
