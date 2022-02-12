@@ -3,8 +3,10 @@
 
   <div fxLayout="row wrap" fxLayoutAlign="space-around space-evenly" fxLayoutGap="2rem" fxLayoutGap.lt-sm="0">
     <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="2rem" fxLayoutGap.lt-sm="0">
-      <app-requirements-table *ngFor="let requirements of totalRequirements" [requirements]="requirements">
-      </app-requirements-table>
+
+      <div *ngFor="let requirements of totalRequirements">
+        <ng-container *ngTemplateOutlet="ItemTable; context:{$implicit: requirements}"></ng-container>
+      </div>
     </div>
     <div fxLayout="column" fxLayoutAlign="space-between space-between" fxLayoutGap="2rem">
       <div>
@@ -42,3 +44,29 @@
     </div>
   </div>
 </div>
+
+<ng-template #ItemTable let-item>
+  <h3 class="title">{{item.title}}:</h3>
+  <table class="req box">
+    <tr>
+      <td>OS Version:</td>
+      <td>{{item.osVersion}}</td>
+    </tr>
+    <tr>
+      <td>Processor:</td>
+      <td>{{item.processor}}</td>
+    </tr>
+    <tr>
+      <td>Memory:</td>
+      <td>{{item.memory}}</td>
+    </tr>
+    <tr>
+      <td>OS Version:</td>
+      <td>{{item.osVersion2}}</td>
+    </tr>
+    <tr>
+      <td>Disc space:</td>
+      <td>{{item.discSpace}}</td>
+    </tr>
+  </table>
+</ng-template>

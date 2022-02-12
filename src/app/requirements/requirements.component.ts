@@ -27,5 +27,4 @@ export class RequirementsComponent implements OnInit, OnDestroy {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
   }
-
 }

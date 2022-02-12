@@ -11,6 +11,29 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+.req{
+  background: url(/assets/bg-box-1.png) center center/cover no-repeat;
+  border: 2px solid rgba(242, 232, 217, 0.5);
+}
+.box{
+  padding: 1rem;
+
+  td:first-child{
+    width: 30%;
+    text-align: end;
+    vertical-align: text-top;
+  }
+  td:nth-child(2n){
+    width: 70%;
+    padding-left: 1rem;
+    color: $gray-color;
+    vertical-align: text-top;
+  }
+  td{
+    height: 3rem;
+  }
+}
 .box{
   background: url(/assets/bg-box-1.png) center center/cover no-repeat;
   border: 2px solid rgba(242, 232, 217, 0.5);
