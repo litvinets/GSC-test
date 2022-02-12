@@ -8,39 +8,19 @@
       <h2>bonus</h2><img class="bonus-info" src="/assets/icons/info.png" alt="info">
     </div>
   </div>
-  <div class="list" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-sm="column"
-    fxLayoutAlign.lt-sm="center start">
-    <ul>
-      <li [ngClass]="{'unactive': !preorderBonus.preorderBonus}">Preorder Bonus<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.preorderBonus ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-      <li [ngClass]="{'unactive': !preorderBonus.specialExtraQuest}">Special Extra Quest<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.specialExtraQuest ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-      <li [ngClass]="{'unactive': !preorderBonus.officialSoundtrack}">Official Soundtrack</li>
-      <li [ngClass]="{'unactive': !preorderBonus.detailsPreorder}">{{preorderBonus.detailsPreorder ?
-        preorderBonus.detailsPreorder :'2 Costumes, 3 Weapon skins' }}<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.detailsPreorder ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-      <li [ngClass]="{'unactive': !preorderBonus.seasonPass}">SEASON PASS<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.seasonPass ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-    </ul>
-
-    <ul>
-      <li [ngClass]="{'unactive': !preorderBonus.steamExclusiveContent}">Steam Exclusive Content<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.steamExclusiveContent ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-      <li [ngClass]="{'unactive': !preorderBonus.digitalArtbook}">Digital Artbook<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.digitalArtbook ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-      <li [ngClass]="{'unactive': !preorderBonus.detailsBonus}">{{preorderBonus.detailsBonus ?
-        preorderBonus.detailsBonus :'1 Costume, 3 Weapon skins' }}<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.detailsBonus ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-      <li [ngClass]="{'unactive': !preorderBonus.twoStoryexpansions}">2 Story Expansions<img class="bonus-info"
-          src="/assets/icons/{{!preorderBonus.twoStoryexpansions ? 'info-gray' : 'info' }}.png" alt="info">
-      </li>
-    </ul>
+  <div *ngIf="!isMobileView && preorderList && bonusList" class="list" fxLayout="row"
+    fxLayoutAlign="space-between start">
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: preorderList | activitySort}"></ng-container>
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: bonusList | activitySort}"></ng-container>
   </div>
-</ng-container>
+  <div *ngIf="isMobileView && fullList" class="list" fxLayout="column" fxLayoutAlign="space-between start">
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | activitySort}"></ng-container>
+  </div>
+
+  <ng-template #ItemList let-list>
+    <ul *ngIf="list">
+      <li *ngFor="let item of list" [ngClass]="{'unactive': !item.isActive}">{{item.title}}<img *ngIf="item.hasInfo"
+          class="bonus-info" src="/assets/icons/{{!item.isActive ? 'info-gray' : 'info' }}.png" alt="info">
+      </li>
+    </ul>
+  </ng-template>

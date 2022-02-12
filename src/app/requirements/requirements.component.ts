@@ -13,7 +13,7 @@ export class RequirementsComponent implements OnInit, OnDestroy {
   readonly subLang = [['it', 'jpn', 'pol', 'kor'], ['esp', 'china', 'china_tr', 'grm'], ['bz', 'fr']];
 
   destroy$: Subject<boolean> = new Subject<boolean>();
-  totalRequirements: Requirements[];
+  totalRequirements: Requirements[] = [];
 
   constructor(private requirementsService: RequirementsService) { }
 

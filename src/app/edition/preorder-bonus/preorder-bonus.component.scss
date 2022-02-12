@@ -49,6 +49,10 @@ ul {
   li{
     list-style-image: url(/assets/icons/radiation.png);
     margin-top: 1rem;
+
+    img{
+      vertical-align: bottom;
+    }
   }
 
   .bonus-info{

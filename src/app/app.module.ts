@@ -8,6 +8,7 @@ import { RequirementsComponent } from './requirements/requirements.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PreorderBonusComponent } from './edition/preorder-bonus/preorder-bonus.component';
 import { RequirementsTableComponent } from './shared/components/requirements-table/requirements-table.component';
+import { ActivitySortPipe } from './shared/pipes/activity-sort.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RequirementsTableComponent } from './shared/components/requirements-tab
     RequirementsComponent,
     PreorderBonusComponent,
     RequirementsTableComponent,
+    ActivitySortPipe,
   ],
   imports: [
     BrowserModule,

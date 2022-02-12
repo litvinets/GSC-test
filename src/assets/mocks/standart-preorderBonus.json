@@ -1,11 +1,54 @@
-{
-  "preorderBonus": true,
-  "specialExtraQuest": false,
-  "officialSoundtrack": false,
-  "seasonPass": false,
-  "detailsPreorder": "",
-  "steamExclusiveContent": true,
-  "digitalArtbook": false,
-  "detailsBonus": "",
-  "twoStoryexpansions": false
-}
+[
+  {
+    "title": "Preorder Bonus",
+    "order": "1.1",
+    "isActive": true,
+    "hasInfo": true
+  },
+  {
+    "title": "Special Extra Quest",
+    "order": "1.2",
+    "isActive": false,
+    "hasInfo": true
+  },
+  {
+    "title": "Official Soundtrack",
+    "order": "1.3",
+    "isActive": false
+  },
+  {
+    "title": "2 Costumes, 3 Weapon skins",
+    "order": "1.4",
+    "isActive": false,
+    "hasInfo": true
+  },
+  {
+    "title": "SEASON PASS",
+    "order": "1.5",
+    "isActive": false,
+    "hasInfo": true
+  },
+  {
+    "title": "Steam Exclusive Content",
+    "order": "2.1",
+    "isActive": true,
+    "hasInfo": true
+  },
+  {
+    "title": "Digital Art Book",
+    "order": "2.2",
+    "isActive": false
+  },
+  {
+    "title": "1 Costume, 3 Weapon skins",
+    "order": "2.3",
+    "isActive": false,
+    "hasInfo": true
+  },
+  {
+    "title": "2 Story Expansions",
+    "order": "2.4",
+    "isActive": false,
+    "hasInfo": true
+  }
+]

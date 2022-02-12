@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Edition } from '../models/edition';
-import { PreorderBonus } from '../models/preorderBonus';
+import { PreorderBonusItem } from '../models/preorderBonus';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class EditionService {
   * This method get preorder and bonus info by edition id
   * @param id string
   */
-  getPreorderBonusByEditionId(id: string): Observable<PreorderBonus> {
-    return this.http.get<PreorderBonus>(`/assets/mocks/${id}-preorderBonus.json`);
+  getPreorderBonusByEditionId(id: string): Observable<PreorderBonusItem[]> {
+    return this.http.get<PreorderBonusItem[]>(`/assets/mocks/${id}-preorderBonus.json`);
   }
 }

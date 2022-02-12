@@ -19,6 +19,9 @@
   &-price{
     color: $yellow-color;
     font-family: $title-text;
+    &-addition{
+      font-size: 24px;
+    }
   }
 }
 nav{
