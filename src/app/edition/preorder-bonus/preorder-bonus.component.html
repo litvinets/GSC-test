@@ -8,10 +8,11 @@
       <h2>bonus</h2><img class="bonus-info" src="/assets/icons/info.png" alt="info">
     </div>
   </div>
-  <div *ngIf="!isMobileView && preorderList && bonusList" class="list" fxLayout="row"
-    fxLayoutAlign="space-between start">
-    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: preorderList | activitySort}"></ng-container>
-    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: bonusList | activitySort}"></ng-container>
+  <div *ngIf="!isMobileView && fullList" class="list" fxLayout="row" fxLayoutAlign="space-between start">
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeFilter : '1' | activitySort}">
+    </ng-container>
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeFilter : '2' | activitySort}">
+    </ng-container>
   </div>
   <div *ngIf="isMobileView && fullList" class="list" fxLayout="column" fxLayoutAlign="space-between start">
     <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | activitySort}"></ng-container>

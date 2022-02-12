@@ -8,6 +8,7 @@ import { RequirementsComponent } from './requirements/requirements.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PreorderBonusComponent } from './edition/preorder-bonus/preorder-bonus.component';
 import { ActivitySortPipe } from './shared/pipes/activity-sort.pipe';
+import { TypeFilterPipe } from './shared/pipes/type-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ActivitySortPipe } from './shared/pipes/activity-sort.pipe';
     RequirementsComponent,
     PreorderBonusComponent,
     ActivitySortPipe,
+    TypeFilterPipe,
   ],
   imports: [
     BrowserModule,

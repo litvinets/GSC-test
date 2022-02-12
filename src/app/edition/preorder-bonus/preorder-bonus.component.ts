@@ -15,18 +15,13 @@ export class PreorderBonusComponent implements OnInit, OnDestroy {
   @Input() set currentEditionTitle(currentEditionTitle: string) {
     this.editionService.getPreorderBonusByEditionId(EditionTitle[currentEditionTitle]).pipe(
       takeUntil(this.destroy$)
-    ).subscribe(((preorderBonusItems: PreorderBonusItem[]) => {
-      this.fullList = this.sortOrder(preorderBonusItems);
-      this.divideList(this.fullList);
-    }));
+    ).subscribe(((preorderBonusItems: PreorderBonusItem[]) => this.fullList = this.sortOrder(preorderBonusItems)));
   };
 
   readonly preorderBonus = PreorderBonus;
 
   destroy$: Subject<boolean> = new Subject<boolean>();
   isMobileView: boolean = false;
-  preorderList: PreorderBonusItem[];
-  bonusList: PreorderBonusItem[];
   fullList: PreorderBonusItem[];
 
   constructor(private editionService: EditionService) { }
@@ -42,16 +37,6 @@ export class PreorderBonusComponent implements OnInit, OnDestroy {
 
   private sortOrder(list: PreorderBonusItem[]): PreorderBonusItem[] {
     return list.sort((a: PreorderBonusItem, b: PreorderBonusItem) => (a.order > b.order) ? -1 : 1);
-  }
-
-  private divideList(list: PreorderBonusItem[]): void {
-    this.preorderList = [];
-    this.bonusList = [];
-    list.forEach((item: PreorderBonusItem) => {
-      item.order.startsWith('1')
-        ? this.preorderList.push(item)
-        : this.bonusList.push(item)
-    })
   }
 
   private isWindowMobile(event: any): void {

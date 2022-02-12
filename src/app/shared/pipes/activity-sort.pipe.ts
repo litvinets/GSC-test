@@ -6,8 +6,8 @@ import { PreorderBonusItem } from '../models/preorderBonus';
 })
 export class ActivitySortPipe implements PipeTransform {
 
-  transform(array: PreorderBonusItem[]): unknown {
-    return array.sort((a: PreorderBonusItem) => (a.isActive) ? -1 : 1)
+  transform(array: PreorderBonusItem[]): PreorderBonusItem[] {
+    return array.sort((a: PreorderBonusItem) => (a.isActive) ? -1 : 1);
   }
 
 }
