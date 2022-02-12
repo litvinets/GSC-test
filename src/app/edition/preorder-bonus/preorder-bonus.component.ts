@@ -15,7 +15,7 @@ export class PreorderBonusComponent implements OnInit, OnDestroy {
   @Input() set currentEditionTitle(currentEditionTitle: string) {
     this.editionService.getPreorderBonusByEditionId(EditionTitle[currentEditionTitle]).pipe(
       takeUntil(this.destroy$)
-    ).subscribe(((preorderBonusItems: PreorderBonusItem[]) => this.fullList = this.sortOrder(preorderBonusItems)));
+    ).subscribe(((preorderBonusItems: PreorderBonusItem[]) => this.fullList = preorderBonusItems));
   };
 
   readonly preorderBonus = PreorderBonus;
@@ -35,14 +35,9 @@ export class PreorderBonusComponent implements OnInit, OnDestroy {
     this.isWindowMobile(event);
   }
 
-  private sortOrder(list: PreorderBonusItem[]): PreorderBonusItem[] {
-    return list.sort((a: PreorderBonusItem, b: PreorderBonusItem) => (a.order > b.order) ? -1 : 1);
-  }
-
   private isWindowMobile(event: any): void {
     this.isMobileView = event.innerWidth <= 660;
   }
-
 
   ngOnDestroy(): void {
     this.destroy$.next(true);

@@ -9,13 +9,16 @@
     </div>
   </div>
   <div *ngIf="!isMobileView && fullList" class="list" fxLayout="row" fxLayoutAlign="space-between start">
-    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeFilter : '1' | activitySort}">
+    <ng-container
+      *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeSort | typeFilter : '1' | activitySort }">
     </ng-container>
-    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeFilter : '2' | activitySort}">
+    <ng-container
+      *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeSort | typeFilter : '2' | activitySort  }">
     </ng-container>
   </div>
   <div *ngIf="isMobileView && fullList" class="list" fxLayout="column" fxLayoutAlign="space-between start">
-    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | activitySort}"></ng-container>
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList  | typeSort | activitySort }">
+    </ng-container>
   </div>
 
   <ng-template #ItemList let-list>
