@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { ComponentFactoryResolver, Pipe, PipeTransform } from '@angular/core';
 import { PreorderBonusItem } from '../models/preorderBonus';
 
 @Pipe({
@@ -7,7 +7,14 @@ import { PreorderBonusItem } from '../models/preorderBonus';
 export class TypeSortPipe implements PipeTransform {
 
   transform(array: PreorderBonusItem[]): PreorderBonusItem[] {
-    return array.sort((a: PreorderBonusItem, b: PreorderBonusItem) => (a.order > b.order) ? -1 : 1);
+    return array.sort((a: PreorderBonusItem, b: PreorderBonusItem) => {
+      const firstItem = a.order.split('.');
+      const secondItem = b.order.split('.');
+      if (firstItem[1] >= secondItem[1]) {
+        return (firstItem[2] < secondItem[2]) ? 1 : -1;
+      } else {
+        return -1;
+      }
+    })
   }
-
 }

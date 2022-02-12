@@ -9,21 +9,20 @@
     </div>
   </div>
   <div *ngIf="!isMobileView && fullList" class="list" fxLayout="row" fxLayoutAlign="space-between start">
-    <ng-container
-      *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeSort | typeFilter : '1' | activitySort }">
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeFilter : '1'}">
     </ng-container>
-    <ng-container
-      *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeSort | typeFilter : '2' | activitySort  }">
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList | typeFilter : '2'}">
     </ng-container>
   </div>
   <div *ngIf="isMobileView && fullList" class="list" fxLayout="column" fxLayoutAlign="space-between start">
-    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList  | typeSort | activitySort }">
+    <ng-container *ngTemplateOutlet="ItemList; context:{$implicit: fullList}">
     </ng-container>
   </div>
 
   <ng-template #ItemList let-list>
     <ul *ngIf="list">
-      <li *ngFor="let item of list" [ngClass]="{'unactive': !item.isActive}">{{item.title}}<img *ngIf="item.hasInfo"
+      <li *ngFor="let item of list | typeSort | activitySort" [ngClass]="{'unactive': !item.isActive}">
+        {{item.title}}<img *ngIf="item.hasInfo"
           [ngClass]="item.isActive ? 'bonus-info' : 'bonus-info bonus-info-unactive'"
           src="/assets/icons/{{!item.isActive ? 'info-gray' : 'info' }}.png" alt="info">
       </li>
