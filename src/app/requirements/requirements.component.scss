@@ -68,8 +68,12 @@
   }
   &-gameplay{
     img{
-      margin: 0 1rem;
+      margin: 0 1rem 0 0;
     }
+    .age-lim{
+      margin-left: 1rem;
+    }
+
   }
 }
 .title{
