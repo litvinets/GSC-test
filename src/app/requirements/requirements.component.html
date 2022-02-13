@@ -11,37 +11,42 @@
     <div fxLayout="column" fxLayoutAlign="space-between space-between" fxLayoutGap="2rem">
       <div>
         <h3 class="title">GAMEPLAY:</h3>
-        <ul class="box box-gameplay" fxLayout="row wrap" fxLayoutAlign="space-around space-evenly"
-          fxLayoutAlign.lt-sm="start space-evenly" fxLayoutGap="2rem">
-          <li><img src="/assets/icons/palyer-icon.png" alt="player-icon">Singleplayer</li>
-          <li><img src="/assets/icons/controlleer-icon.png" alt="player-icon">Full Controller Support</li>
-          <li><img src="/assets/icons/users-icon.png" alt="users-icon">
-            <p>Multiplayer (coming soon after the release, as a
-              free update)</p>
-          </li>
-          <li>RATING:<img src="/assets/icons/18age.png" alt="18age"></li>
-        </ul>
+        <div class="box-container">
+          <ul class="box box-gameplay" fxLayout="row wrap" fxLayoutAlign="space-around space-evenly"
+            fxLayoutAlign.lt-sm="start space-evenly" fxLayoutGap="2rem">
+            <li><img src="/assets/icons/palyer-icon.png" alt="player-icon">Singleplayer</li>
+            <li><img src="/assets/icons/controlleer-icon.png" alt="player-icon">Full Controller Support</li>
+            <li><img src="/assets/icons/users-icon.png" alt="users-icon">
+              <p>Multiplayer (coming soon after the release, as a
+                free update)</p>
+            </li>
+            <li>RATING:<img src="/assets/icons/18age.png" alt="18age"></li>
+          </ul>
+        </div>
       </div>
       <div>
         <h3 class="title">localization:</h3>
-        <div class="box box-lang">
-          <ul fxLayout="column" fxLayoutAlign="center start">
-            <h3 class="title title-sub">VOICE & SUBTITLES:</h3>
-            <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayout.lt-sm="column"
-              fxLayoutAlign.lt-sm="start start" fxLayoutGap="1rem">
-              <li *ngFor="let lang of voiseSubLang">
-                <img src="/assets/languages/{{lang}}.png" alt="lang">
-              </li>
-            </div>
-            <h3 class="title title-sub">SUBTITLES only:</h3>
-            <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="1rem">
-              <div *ngFor="let langs of subLang" fxLayout="column wrap" fxLayoutAlign="start start">
-                <li *ngFor="let lang of langs">
+        <div class="box-container">
+
+          <div class="box box-lang">
+            <ul fxLayout="column" fxLayoutAlign="center start">
+              <h3 class="title title-sub">VOICE & SUBTITLES:</h3>
+              <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayout.lt-sm="column"
+                fxLayoutAlign.lt-sm="start start" fxLayoutGap="1rem">
+                <li *ngFor="let lang of voiseSubLang">
                   <img src="/assets/languages/{{lang}}.png" alt="lang">
                 </li>
               </div>
-            </div>
-          </ul>
+              <h3 class="title title-sub">SUBTITLES only:</h3>
+              <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="1rem">
+                <div *ngFor="let langs of subLang" fxLayout="column wrap" fxLayoutAlign="start start">
+                  <li *ngFor="let lang of langs">
+                    <img src="/assets/languages/{{lang}}.png" alt="lang">
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -50,26 +55,29 @@
 
 <ng-template #ItemTable let-item>
   <h3 class="title">{{item.title}}:</h3>
-  <table class="req box">
-    <tr>
-      <td>OS Version:</td>
-      <td>{{item.osVersion}}</td>
-    </tr>
-    <tr>
-      <td>Processor:</td>
-      <td>{{item.processor}}</td>
-    </tr>
-    <tr>
-      <td>Memory:</td>
-      <td>{{item.memory}}</td>
-    </tr>
-    <tr>
-      <td>OS Version:</td>
-      <td>{{item.osVersion2}}</td>
-    </tr>
-    <tr>
-      <td>Disc space:</td>
-      <td>{{item.discSpace}}</td>
-    </tr>
-  </table>
+  <div class="box-container">
+
+    <table class="box">
+      <tr>
+        <td>OS Version:</td>
+        <td>{{item.osVersion}}</td>
+      </tr>
+      <tr>
+        <td>Processor:</td>
+        <td>{{item.processor}}</td>
+      </tr>
+      <tr>
+        <td>Memory:</td>
+        <td>{{item.memory}}</td>
+      </tr>
+      <tr>
+        <td>OS Version:</td>
+        <td>{{item.osVersion2}}</td>
+      </tr>
+      <tr>
+        <td>Disc space:</td>
+        <td>{{item.discSpace}}</td>
+      </tr>
+    </table>
+  </div>
 </ng-template>

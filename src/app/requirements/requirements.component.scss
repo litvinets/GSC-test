@@ -12,11 +12,6 @@
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-
-.req{
-  background: url(/assets/bg-box-1.png) center center/cover no-repeat;
-  border: 2px solid rgba(242, 232, 217, 0.5);
-}
 .box{
   padding: 1rem;
 
@@ -37,7 +32,15 @@
 }
 .box{
   background: url(/assets/bg-box-1.png) center center/cover no-repeat;
-  border: 2px solid rgba(242, 232, 217, 0.5);
+
+  border-top: 2px solid rgba(242, 232, 217, 0.5);
+  border-bottom: 2px solid rgba(242, 232, 217, 0.5);
+  border-image: url('/assets/icons/border.png') 30 stretch;
+  &-container{
+    border-left: 2px solid rgba(242, 232, 217, 0.5);
+    border-right: 2px solid rgba(242, 232, 217, 0.5);
+    border-image: url('/assets/icons/border2.png') 30 stretch;
+  }
   max-width: 570px;
   min-height: 200px;
   margin: 0;
