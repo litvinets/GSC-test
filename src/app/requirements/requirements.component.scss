@@ -13,7 +13,19 @@
   margin-bottom: 1rem;
 }
 .box{
-  padding: 1rem;
+  padding: 2rem;
+  background: url(/assets/bg-box-1.png) center center/cover no-repeat;
+  border-top: 2px solid rgba(242, 232, 217, 0.5);
+  border-bottom: 2px solid rgba(242, 232, 217, 0.5);
+  border-image: url('/assets/icons/border.png') 30 stretch;
+  &-container{
+    border-left: 2px solid rgba(242, 232, 217, 0.5);
+    border-right: 2px solid rgba(242, 232, 217, 0.5);
+    border-image: url('/assets/icons/border2.png') 30 stretch;
+  }
+  max-width: 570px;
+  min-height: 200px;
+  margin: 0;
 
   td:first-child{
     width: 30%;
@@ -28,22 +40,10 @@
   }
   td{
     height: 3rem;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
   }
-}
-.box{
-  background: url(/assets/bg-box-1.png) center center/cover no-repeat;
-
-  border-top: 2px solid rgba(242, 232, 217, 0.5);
-  border-bottom: 2px solid rgba(242, 232, 217, 0.5);
-  border-image: url('/assets/icons/border.png') 30 stretch;
-  &-container{
-    border-left: 2px solid rgba(242, 232, 217, 0.5);
-    border-right: 2px solid rgba(242, 232, 217, 0.5);
-    border-image: url('/assets/icons/border2.png') 30 stretch;
-  }
-  max-width: 570px;
-  min-height: 200px;
-  margin: 0;
   ul{
     list-style-type: none;
     padding: 0;
@@ -55,6 +55,9 @@
     margin-bottom: 1rem;
     justify-content: center;
     align-items: end;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
     p{
       max-width: 222px;
       margin: 0;
@@ -64,7 +67,6 @@
     padding: 2rem;
   }
   &-gameplay{
-    padding: 1rem;
     img{
       margin: 0 1rem;
     }
