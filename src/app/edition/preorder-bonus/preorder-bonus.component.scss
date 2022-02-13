@@ -1,7 +1,7 @@
 @import "/src/app/shared/shared.scss";
 
 .bonus{
-  opacity: 0.9;
+  opacity: 0.8;
   width: 100%;
   margin: 2rem 0;
 
@@ -28,11 +28,14 @@
     color: $white-color;
     background: url(/assets/bonus-bg.png) center center/cover no-repeat;
 
+    h2, .bonus-info{
+        padding: 0.5rem;
+      }
+
     &-reverse{
       transform: scaleX(-1);
       h2, .bonus-info{
         transform: scaleX(-1);
-        padding: 0.5rem;
       }
     }
   }

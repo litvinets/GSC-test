@@ -1,5 +1,6 @@
-<div class="wrapper" *ngIf="totalRequirements.length">
+<div class="wrapper" *ngIf="totalRequirements.length" fxLayout="column" fxLayoutAlign="start center">
   <h1 class="header">SYSTEM REQUIREMENTS</h1>
+  <img class="header header-line" src="/assets/icons/line.png" alt="line">
 
   <div fxLayout="row wrap" fxLayoutAlign="space-around space-evenly" fxLayoutGap="2rem" fxLayoutGap.lt-sm="0">
     <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="2rem" fxLayoutGap.lt-sm="0">
@@ -10,11 +11,14 @@
     <div fxLayout="column" fxLayoutAlign="space-between space-between" fxLayoutGap="2rem">
       <div>
         <h3 class="title">GAMEPLAY:</h3>
-        <ul class="box box-gameplay" fxLayout="row wrap" fxLayoutAlign="start space-evenly" fxLayoutGap="2rem">
+        <ul class="box box-gameplay" fxLayout="row wrap" fxLayoutAlign="space-around space-evenly"
+          fxLayoutAlign.lt-sm="start space-evenly" fxLayoutGap="2rem">
           <li><img src="/assets/icons/palyer-icon.png" alt="player-icon">Singleplayer</li>
           <li><img src="/assets/icons/controlleer-icon.png" alt="player-icon">Full Controller Support</li>
-          <li><img src="/assets/icons/users-icon.png" alt="users-icon">Multiplayer (coming soon after the release, as a
-            free update)</li>
+          <li><img src="/assets/icons/users-icon.png" alt="users-icon">
+            <p>Multiplayer (coming soon after the release, as a
+              free update)</p>
+          </li>
           <li>RATING:<img src="/assets/icons/18age.png" alt="18age"></li>
         </ul>
       </div>

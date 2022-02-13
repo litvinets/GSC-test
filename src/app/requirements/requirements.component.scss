@@ -10,6 +10,7 @@
 
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .req{
@@ -51,7 +52,10 @@
     margin-bottom: 1rem;
     justify-content: center;
     align-items: end;
-    max-width: 222px;
+    p{
+      max-width: 222px;
+      margin: 0;
+    }
   }
   &-lang{
     padding: 2rem;
@@ -83,5 +87,9 @@
     line-height: 41px;
     text-align: center;
     letter-spacing: -1px;
+
+    &-line{
+      width: 80%
+    }
   }
 }

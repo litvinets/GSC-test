@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+import { Constants } from '../shared/constants/constants';
 import { EditionTitle } from '../shared/enum/edition';
 import { Edition } from '../shared/models/edition';
 import { EditionService } from '../shared/services/edition.service';
@@ -11,6 +12,8 @@ import { EditionService } from '../shared/services/edition.service';
 })
 export class EditionComponent implements OnInit, OnDestroy {
   readonly editionTitle = EditionTitle;
+  readonly constants = Constants;
+
 
   currentEditionTitle: string = EditionTitle.ultimate;
   currentEdition: Edition;
