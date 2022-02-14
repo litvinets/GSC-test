@@ -1,6 +1,7 @@
 @import "/src/app/shared/shared.scss";
 .btn-preorder{
   background: url(/assets/button-pre-order.png) center center/cover no-repeat;
+  background-size: 100%;
   min-width: 307px;
   min-height: 72px;
   border: none;
@@ -54,6 +55,9 @@ nav{
     max-width: 256px;
     max-height: 388px;
     margin-bottom: 2rem;
+  }
+  .btn-preorder{
+    background-size: 80%;
   }
 }
 .active{
