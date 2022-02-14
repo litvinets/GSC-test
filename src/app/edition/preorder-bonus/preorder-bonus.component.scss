@@ -17,7 +17,6 @@
     position: relative;
     width: 325px;
     text-align: center;
-
     font-family: $title-text;
     font-style: normal;
     font-weight: bold;
@@ -25,10 +24,6 @@
     font-size: 24px;
     color: $white-color;
     background: url(/assets/bonus-bg.png) center center/cover no-repeat;
-
-    img{
-      padding-left: 1rem;
-    }
 
     &-reverse{
       transform: scaleX(-1);
