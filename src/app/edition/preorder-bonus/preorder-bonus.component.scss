@@ -13,10 +13,8 @@
     opacity: 1;
     cursor: default;
   }
-
   &-title{
     position: relative;
-    top: 1.5rem;
     width: 325px;
     text-align: center;
 
@@ -24,13 +22,13 @@
     font-style: normal;
     font-weight: bold;
     text-transform: uppercase;
-
+    font-size: 24px;
     color: $white-color;
     background: url(/assets/bonus-bg.png) center center/cover no-repeat;
 
-    h2, .bonus-info{
-        padding: 0.5rem;
-      }
+    img{
+      padding-left: 1rem;
+    }
 
     &-reverse{
       transform: scaleX(-1);
@@ -43,10 +41,10 @@
   &-image{
     position: absolute;
     z-index: 1000;
-    height: 156px;
-    width: 350px;
-    background: url(/assets/bonus-items.png) center center/cover no-repeat;
     background-size: 10rem;
+  }
+  h2{
+    margin: 1rem;
   }
 }
 
