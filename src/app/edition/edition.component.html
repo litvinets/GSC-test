@@ -3,12 +3,12 @@
     <ul fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px" fxLayout.lt-sm="column"
       fxLayoutAlign.lt-sm="center center">
       <img class="tabs-divider" src="/assets/icons/line-01.png" alt="line-01">
-      <li (click)="onNavigate(editionTitle.standart)"
-        [ngClass]="{'active': currentEditionTitle === editionTitle.standart}">
-        {{editionTitle.standart}}</li>
+      <li (click)="onNavigate(editionTitle.standard)"
+        [ngClass]="{'active': currentEditionTitle === editionTitle.standard}">
+        {{editionTitle.standard}}</li>
       <img class="tabs-divider" src="/assets/icons/line-02.png" alt="line-02">
-      <li (click)="onNavigate(editionTitle.delux)" [ngClass]="{'active': currentEditionTitle=== editionTitle.delux}">
-        {{editionTitle.delux}}</li>
+      <li (click)="onNavigate(editionTitle.deluxe)" [ngClass]="{'active': currentEditionTitle=== editionTitle.deluxe}">
+        {{editionTitle.deluxe}}</li>
       <img class="tabs-divider" src="/assets/icons/line-03.png" alt="line-03">
       <li (click)="onNavigate(editionTitle.ultimate)"
         [ngClass]="{'active': currentEditionTitle === editionTitle.ultimate}">{{editionTitle.ultimate}}</li>
@@ -16,7 +16,7 @@
     </ul>
   </nav>
 
-  <div fxLayout="row wrap" fxLayoutAlign="space-evenly start" fxLayoutGap="5rem" fxLayoutGap.lt-sm="0">
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly start" fxLayoutGap="9rem" fxLayoutGap.lt-sm="0">
     <div fxLayout="column" fxLayoutAlign="space-between center">
       <img class="image" [src]="currentEdition.imagePath" alt="{{currentEdition.title}}">
       <button class="btn-preorder"></button>

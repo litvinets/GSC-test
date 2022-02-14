@@ -1,5 +1,5 @@
 export enum EditionTitle {
-  standart = 'standart',
-  delux = 'delux',
+  standard = 'standard',
+  deluxe = 'deluxe',
   ultimate = 'ultimate',
 }
