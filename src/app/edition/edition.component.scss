@@ -50,6 +50,11 @@ nav{
   .tabs-divider{
     display: none;
   }
+  .image{
+    max-width: 256px;
+    max-height: 388px;
+    margin-bottom: 2rem;
+  }
 }
 .active{
   color: $yellow-color !important;
