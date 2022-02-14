@@ -2,7 +2,7 @@
   <h1 class="header">SYSTEM REQUIREMENTS</h1>
   <img class="header header-line" src="/assets/icons/line.png" alt="line">
 
-  <div fxLayout="row wrap" fxLayoutAlign="space-around space-evenly" fxLayoutGap="2rem" fxLayoutGap.lt-sm="0">
+  <div fxLayout="row wrap" fxLayoutAlign="space-around space-evenly" fxLayoutGap="2rem" fxLayoutGap.lt-lg="0">
     <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="2rem" fxLayoutGap.lt-sm="0">
       <div *ngFor="let requirements of totalRequirements">
         <ng-container *ngTemplateOutlet="ItemTable; context:{$implicit: requirements}"></ng-container>
